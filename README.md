@@ -10,17 +10,17 @@ The implementation of the Framework functionality uses the following [programmin
 
 ### Web
 
-Routes are loaded from the folder specified by the loadRoutes method of the Http core. To generate Route links, use the route() function.<br>
+Routes are loaded from the folder specified by the `loadRoutes` method of the Http core. To generate Route links, use the `route()` function.<br>
 How to work with Routes, see [thephpleague/route](https://github.com/thephpleague/route) and [nikic/FastRoute](https://github.com/nikic/FastRoute).
 
-The Twig template engine is used for views. Its functions can be extended via the addTwigExtension method of the Http core.<br>
+The Twig template engine is used for views. Its functions can be extended via the `addTwigExtension` method of the Http core.<br>
 More details about working with Twig [here](https://twig.symfony.com/documentation).
 
 To work with Request and Response, the [GuzzleHttp\Psr7](https://github.com/guzzle/psr7) library is used.<br>
 For emitting response used [httpsoft/http-emitter](https://github.com/httpsoft/http-emitter).
 
 Simple custom exception handling [set_exception_handler](https://www.php.net/manual/en/function.set-exception-handler.php) is implemented.<br>
-The view for outputting errors is set via the registerExceptionOutput method of the Http core.
+The view for outputting errors is set via the `registerExceptionOutput` method of the Http core.
 
 ### Console
 
