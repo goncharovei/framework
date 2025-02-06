@@ -45,14 +45,9 @@ class LoadConfig
      */
     protected function loadConfigurationFiles(Application $app, RepositoryContract $repository): void
     {
+        $base = [];
+
         $files = $this->getConfigurationFiles($app);
-
-        $base = $this->getBaseConfiguration();
-
-        foreach (array_diff(array_keys($base), array_keys($files)) as $name => $config) {
-            $repository->set($name, $config);
-        }
-
         foreach ($files as $name => $path) {
             $base = $this->loadConfigurationFile($repository, $name, $path, $base);
         }
@@ -129,19 +124,4 @@ class LoadConfig
         return $nested;
     }
 
-    /**
-     * Get the base configuration files.
-     *
-     * @return array
-     */
-    protected function getBaseConfiguration()
-    {
-        $config = [];
-
-        foreach (Finder::create()->files()->name('*.php')->in(__DIR__.'/../../../../config') as $file) {
-            $config[basename($file->getRealPath(), '.php')] = require $file->getRealPath();
-        }
-
-        return $config;
-    }
 }
