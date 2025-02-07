@@ -1,7 +1,7 @@
 # Micro framework
 
 This is a mix of several popular libraries that provide basic functionality for working with PHP CLI (Console) and MVC (Web) architecture.<br>
-The basic project structure for this Framework here is [Skeleton project](https://github.com/goncharovei/base-structure).
+A [skeleton project](https://github.com/goncharovei/base-structure) represents the basic project structure for a given framework.
 
 ## Installation
 In your `composer.json` file, add the lines below:
