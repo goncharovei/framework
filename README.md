@@ -1,10 +1,22 @@
 # Micro framework
 
-The Framework uses the recommended PHP standards: PSR-1, PSR-3, PSR-4, PSR-7, PSR-11, PSR-12, PSR-15, PSR-17.
+This is a mix of several popular libraries that provide basic functionality for working with PHP CLI (Console) and MVC (Web) architecture.
 
-When designing the logic of the Framework, some elements of the [Laravel Framework](https://github.com/laravel/framework) logic were used.
-
-The implementation of the Framework functionality uses the following [programming patterns](https://designpatternsphp.readthedocs.io/en/latest/index.html): Abstract Factory, Factory Method, Fluent Interface, Prototype, Static Factory, Dependency Injection, Facade, Null object, Data Transfer Object.
+## Installation
+In your `composer.json` file, add the lines below:
+>"repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/goncharovei/framework"
+    }
+],<br>
+"require": {
+    "php": "^8.2",
+    "goncharovei/framework": "^1.0"
+},
+<br>
+> 
+And then do it `composer install`.  
 
 ## How to use
 
@@ -62,3 +74,10 @@ Execute command<br>
 `vendor/bin/phpstan analyse app`
 
 See details here [Command Line Usage](https://phpstan.org/user-guide/command-line-usage).
+
+### What was used
+The Framework uses the recommended PHP standards: PSR-1, PSR-3, PSR-4, PSR-7, PSR-11, PSR-12, PSR-15, PSR-17.
+
+When designing the logic of the Framework, some elements of the [Laravel Framework](https://github.com/laravel/framework) logic were used.
+
+The implementation of the Framework functionality uses the following [programming patterns](https://designpatternsphp.readthedocs.io/en/latest/index.html): Abstract Factory, Factory Method, Fluent Interface, Prototype, Static Factory, Dependency Injection, Facade, Null object, Data Transfer Object.
