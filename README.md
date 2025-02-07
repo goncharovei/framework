@@ -4,18 +4,18 @@ This is a mix of several popular libraries that provide basic functionality for 
 
 ## Installation
 In your `composer.json` file, add the lines below:
->"repositories": [
+```
+"repositories": [
     {
         "type": "vcs",
         "url": "https://github.com/goncharovei/framework"
     }
-],<br>
+],
 "require": {
     "php": "^8.2",
     "goncharovei/framework": "^1.0"
 },
-<br>
-> 
+``` 
 And then do it `composer install`.  
 
 ## How to use
